@@ -1,0 +1,66 @@
+<%- include("partials/header") %>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">
+            <div id="sidebar" class="col-md-2 px-0">
+                <div class="sideheader pt-3">
+                    <h2>
+                        Korisničke stranice
+                    </h2>
+                    <hr />
+                </div>
+
+                <ul class="nav flex-column pl-1 sidenav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Narudžbe</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Osobni podaci</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Prijavi problem</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Odjava</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-10">
+            <div class="row border-bottom">
+                <div class="col-md-6 d-flex justify-content-end">
+                    <h2 id="logo" class="pt-2">
+                        Klovo
+                        
+                    </h2>
+                </div>
+                <div class="col-md">
+                    <ul id="mainnav" class="nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#"
+                                ><i class="fa fa-user-o fa-2x pr-1"></i>Sign In</a
+                            >
+                        </li>
+                        <li class="nav-item" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+sagittis lacus vel augue laoreet rutrum faucibus.">
+                            <a class="nav-link" href="#"
+                                ><i
+                                    class="fa fa-shopping-basket fa-2x pr-1"
+                                    aria-hidden="true"
+                                ></i>
+                                Košarica</a
+                            >
+                        </li>
+                    </ul>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<%- include("partials/footer") %>
