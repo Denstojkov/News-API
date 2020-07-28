@@ -6,8 +6,7 @@ ejs = require("ejs"),
 methodOvveride = require("method-override");
 const index = require("./routes/index")
 router = express.Router();
-const NewsAPI = require('newsapi');
-const newsapi = new NewsAPI('560993ce6d0c4888afea6c6f59739272');
+const fetch = require('node-fetch');
 
 app.use(express.static(__dirname + "/public/"));
 app.use("/index", index);

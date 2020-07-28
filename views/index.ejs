@@ -6,7 +6,7 @@
             <div id="sidebar" class="col-md-2 px-0">
                 <div class="sideheader pt-3">
                     <h2>
-                        <Menu>
+                        Menu
                     </h2>
                     <hr />
                 </div>
@@ -87,23 +87,28 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
                     
                 </div>
                 <div class="row pt-3">
+                    <% data.forEach(function(news){ %>
                     <div class="col-sm-6 col-md-3">
+                        
                         <div class="card" style="width: 18rem;">
                             <img
                                 class="card-img-top"
-                                src="https://media.kaufland.com/images/PPIM/AP_Content_1010/std.lang.all/66/65/Asset_3306665.jpg"
+                                src="<%= news.urlToImage %>"
                                 alt="Card image cap"
                             />
                             <div class="card-body">
                                 <h5 class="card-title">Card title</h5>
                                 <p class="card-text">
-                                    Some quick example text to build on the card title and
-                                    make up the bulk of the card's content.
-                                </p>
+                                    
+                                        <%= news.title %>
+                                       
+                                    </p>
                                 <a href="#" class="btn btn-primary">Go somewhere</a>
                             </div>
                         </div>
+                       
                     </div>
+                    <%  })%>
                 </div>
             </div>
         </div>
