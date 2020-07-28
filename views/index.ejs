@@ -3,7 +3,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-2">
-            <div id="sidebar" class="col-md-2 px-0">
+            <div id="sidebar" class="col-md-2 px-0 d-none d-sm-none d-md-block">
                 <div class="sideheader pt-3">
                     <h2>
                         Menu
@@ -83,32 +83,45 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
                     </div>
                     </div>
                 </div>
-                <div class="row pt-3">
+                <div class="pt-3">
                     
-                </div>
-                <div class="row pt-3">
-                    <% data.forEach(function(news){ %>
-                    <div class="col-sm-6 col-md-3">
-                        
-                        <div class="card" style="width: 18rem;">
-                            <img
-                                class="card-img-top"
-                                src="<%= news.urlToImage %>"
-                                alt="Card image cap"
-                            />
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">
-                                    
-                                        <%= news.title %>
-                                       
-                                    </p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <div class="col-md-12">
+                        <% let current = -1 %>
+                        <% data.forEach(function(news){ %>
+                            <% let count = Math.floor( Math.random() * Math.floor(4)) %>
+                            <% if(count == 0 && count !== current){ %>
+                            <div class="row py-2 px-1">
+                                <div class="col-sm-12 col-md-8 bg border mainGrid">duh</div>
+                                <div class="col-sm-12 col-md border mainGrid"></div>
                             </div>
-                        </div>
+                            <% current = count %>
+                            <%}else if(count == 1 && count !== current){ %>
+                            <div class="row py-2 px-1">
+                                <div class="col-sm-12 col-md-5 bg border mainGrid">duh</div>
+                                <div class="col-sm-12 col-md border mainGrid"></div>
+                                <div class="col-sm-12 col-md-5 bg border mainGrid">duh</div>
+                            </div>
+                            <% current = count %>
+                            <%}else if(count == 2 && count !== current){ %>
+                            <div class="row py-2 px-1">
+                                <div class="col-sm-12 col-md-3 bg border mainGrid">duh</div>
+                                <div class="col-sm-12 col-md border mainGrid"></div>
+                            </div>
+                            <% current = count %>
+                            <%}else if(count == 3 && count !== current){ %>
+                                <div class="row py-2 px-1">
+                                    <div class="col-sm-12 col-md-4 bg border mainGrid">duh</div>
+                                    <div class="col-sm-12 col-md border mainGrid"></div>
+                                    <div class="col-sm-12 col-md-6 bg border mainGrid">duh</div>
+                                </div>
+                                <% current = count %>
+                                <%}%>
+                                
+                            <% }) %>
+                        
                        
                     </div>
-                    <%  })%>
+                  
                 </div>
             </div>
         </div>

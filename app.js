@@ -8,6 +8,7 @@ const index = require("./routes/index")
 router = express.Router();
 const fetch = require('node-fetch');
 
+
 app.use(express.static(__dirname + "/public/"));
 app.use("/index", index);
 app.set("view engine", "ejs");
