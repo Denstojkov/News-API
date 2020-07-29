@@ -83,4 +83,24 @@ box-shadow: -1px 6px 27px -7px rgba(0,0,0,0.35);
 
 .mainGrid{
 	height: 250px;
+	border: 2px solid white;
+
+}
+
+.apiHeader{
+	padding-top: 10px;
+	font-size: 24px;
+	color: white;
+	font-weight: 400;
+}
+
+.apiText{
+	font-size: 18px;
+	color: white;
+	font-weight: 400;
+}
+
+hr{
+	color: white;
+	background-color: white;
 }
