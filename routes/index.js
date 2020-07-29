@@ -14,7 +14,7 @@ router.get("/",(req,res) => {
     newsapi.v2.topHeadlines({
         sources: 'bbc-news,the-verge',
         language: 'en',
-        pageSize: 10
+        pageSize: 9
         
       }).then(response => {
 

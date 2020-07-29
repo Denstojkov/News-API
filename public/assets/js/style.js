@@ -2,13 +2,17 @@ $(function () {
     $('[data-toggle="popover"]').popover()
   })
 
-let colors= ["#D45113","#F9A03F","#6B7D7D"];
+let colors= ["#E01A4F","#F15946","#F9C22E"];
 
 let gridColors = document.querySelectorAll(".mainGrid");
-
+let current = 0;
+let random = 0;
 
 for(let i=0; i <= gridColors.length; i++){
-	let random = Math.floor( Math.random() * Math.floor(2));
+	while(current === random){
+	 random = Math.floor( Math.random() * Math.floor(3));
+		}
 	gridColors[i].style.backgroundColor = colors[random];
+	current = random;
 	console.log(i);
 }
