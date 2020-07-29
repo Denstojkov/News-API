@@ -86,37 +86,29 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
                 <div class="pt-3">
                     
                     <div class="col-md-12">
-                        <% let current = -1 %>
+                        <% let current = 0 %>
+						<% let count = 0 %>
+						<% let currentCount = 0 %>
                         <% data.forEach(function(news){ %>
-                            <% let count = Math.floor( Math.random() * Math.floor(4)) %>
-                            <% if(count == 0 && count !== current){ %>
-                            <div class="row py-2 px-1">
-                                <div class="col-sm-12 col-md-8 bg border mainGrid">duh</div>
-                                <div class="col-sm-12 col-md border mainGrid"></div>
-                            </div>
-                            <% current = count %>
-                            <%}else if(count == 1 && count !== current){ %>
-                            <div class="row py-2 px-1">
-                                <div class="col-sm-12 col-md-5 bg border mainGrid">duh</div>
-                                <div class="col-sm-12 col-md border mainGrid"></div>
-                                <div class="col-sm-12 col-md-5 bg border mainGrid">duh</div>
-                            </div>
-                            <% current = count %>
-                            <%}else if(count == 2 && count !== current){ %>
-                            <div class="row py-2 px-1">
-                                <div class="col-sm-12 col-md-3 bg border mainGrid">duh</div>
-                                <div class="col-sm-12 col-md border mainGrid"></div>
-                            </div>
-                            <% current = count %>
-                            <%}else if(count == 3 && count !== current){ %>
-                                <div class="row py-2 px-1">
-                                    <div class="col-sm-12 col-md-4 bg border mainGrid">duh</div>
-                                    <div class="col-sm-12 col-md border mainGrid"></div>
-                                    <div class="col-sm-12 col-md-6 bg border mainGrid">duh</div>
-                                </div>
-                                <% current = count %>
-                                <%}%>
-                                
+                          <%	if(current === 1){ %>
+							<%let gridcount = Math.floor((12 - count)/2); %>
+							<div class="col-sm-12 col-md-<%=gridcount%> border mainGrid">
+						</div>
+						<div class="col-sm-12 col-md border mainGrid">
+						</div>
+						</div>
+				
+						<% current = 0 %>
+					<%	}else if(current == 0){ %>
+						<% while(count == currentCount){ %>
+						<% count = Math.floor( Math.random() * Math.floor(4)) +3 %>
+				<%	} %>
+						<div class="row">
+							
+						<div class="col-sm-12 col-md-<%=count%> border mainGrid"></div>
+						<% currentCount = count %>
+						<% current = 1 %>
+					<%	} %>
                             <% }) %>
                         
                        
