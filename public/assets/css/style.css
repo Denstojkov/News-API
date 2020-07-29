@@ -9,10 +9,12 @@
 	color: white;
 }
 
+
 body{
 	font-family: 'Roboto', sans-serif;
 	font-weight: 500;
 }
+
 
 .sideheader{
 	font-size:24px;
@@ -83,7 +85,9 @@ box-shadow: -1px 6px 27px -7px rgba(0,0,0,0.35);
 
 .mainGrid{
 	height: 250px;
-	border: 2px solid white;
+	border: 1px solid white;
+	border-radius: 5px;
+	z-index:0;
 
 }
 
@@ -92,15 +96,20 @@ box-shadow: -1px 6px 27px -7px rgba(0,0,0,0.35);
 	font-size: 24px;
 	color: white;
 	font-weight: 400;
+	height:60px;
+	text-align:center;
 }
 
 .apiText{
 	font-size: 18px;
 	color: white;
-	font-weight: 400;
+	font-weight: 300;
+	text-align:  center;
 }
 
 hr{
 	color: white;
 	background-color: white;
+	width: 90%;
 }
+

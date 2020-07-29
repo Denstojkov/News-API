@@ -2,7 +2,7 @@ $(function () {
     $('[data-toggle="popover"]').popover()
   })
 
-let colors= ["#896A67","#EAC435","#03CEA4","#3066BE","#FF858D","#2CA58D","#447604","#6CC551","#52AD9C","#F87060","#F87060","#3F88C5"];
+let colors= ["#896A67","#EAC435","#03CEA4","#3066BE","#FF858D","#2CA58D","#447604","#6CC551","#52AD9C","#F87060","#EE4266","#3F88C5"];
 
 let gridColors = document.querySelectorAll(".mainGrid");
 let limitApiText = document.querySelectorAll(".apiText");
@@ -18,6 +18,7 @@ for(let i=0; i < gridColors.length; i++){
 		}
 	gridColors[i].style.backgroundColor = colors[random];
 	current = random;
+	
 	
 }
 
