@@ -2,7 +2,7 @@ $(function () {
     $('[data-toggle="popover"]').popover()
   })
 
-let colors= ["#227CF2","#2793F2","#165FF2"];
+let colors= ["#D45113","#F9A03F","#6B7D7D"];
 
 let gridColors = document.querySelectorAll(".mainGrid");
 
