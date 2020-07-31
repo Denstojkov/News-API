@@ -13,6 +13,7 @@
 body{
 	font-family: 'Roboto', sans-serif;
 	font-weight: 500;
+	background-color: #EAEAEA;
 }
 
 
@@ -43,6 +44,7 @@ body{
 
 #mainnav{
 	height:100%;
+	float: right;
 }
 #mainnav .nav-item{
 	height:100%;
@@ -134,6 +136,6 @@ hr{
 .newscontent{
 	font-size: 22px;
 	font-family: 'Oswald', sans-serif;
-	font-weight: 400;
+	font-weight: 300;
 	text-align: justify;
 }
