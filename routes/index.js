@@ -25,5 +25,18 @@ router.get("/",(req,res) => {
       
 })
 
+router.get("/:id",(req,res) => {
+    newsapi.v2.topHeadlines({
+        q : req.params.id
+        
+      }).then(response => {
+
+        let data = response.articles;
+        console.log(data);
+        res.render("result",{data:data})
+      });
+      
+})
+
 module.exports = router;
 

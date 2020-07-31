@@ -87,8 +87,12 @@ box-shadow: -1px 6px 27px -7px rgba(0,0,0,0.35);
 	height: 250px;
 	border: 1px solid white;
 	border-radius: 5px;
-	z-index:0;
+  	transition: transform .2s; /* Animation */
+}
 
+.mainGrid:hover{
+	 transform: scale(1.1);
+	z-index:1;
 }
 
 .apiHeader{
@@ -113,3 +117,20 @@ hr{
 	width: 90%;
 }
 
+.newsimg{
+	height:400px;
+	object-fit: cover;
+
+}
+
+.newstitle{
+	font-size: 72px;
+	text-align: center;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 300;
+}
+
+.newscontent{
+	font-size: 22px;
+	text-align: justify;
+}

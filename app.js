@@ -28,6 +28,8 @@ app.get("/", (req,res) => {
 app.get("/", (req,res) => {
     res.redirect("/webshop");
 })
+// TEST
+
 
 app.listen(3000, function () {
     console.log("Server on 3000");

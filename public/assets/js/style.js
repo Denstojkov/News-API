@@ -9,6 +9,7 @@ let limitApiText = document.querySelectorAll(".apiText");
 let limitApiHeader = document.querySelectorAll(".apiHeader");
 let current = 0;
 let random = 0;
+let count = [];
 
 
 
@@ -18,7 +19,7 @@ for(let i=0; i < gridColors.length; i++){
 		}
 	gridColors[i].style.backgroundColor = colors[random];
 	current = random;
-	
+	count = random;
 	
 }
 
