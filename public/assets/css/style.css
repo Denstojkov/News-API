@@ -93,6 +93,7 @@ box-shadow: -1px 6px 27px -7px rgba(0,0,0,0.35);
 .mainGrid:hover{
 	 transform: scale(1.1);
 	z-index:1;
+	cursor: pointer;
 }
 
 .apiHeader{
@@ -132,5 +133,7 @@ hr{
 
 .newscontent{
 	font-size: 22px;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 400;
 	text-align: justify;
 }

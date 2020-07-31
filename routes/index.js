@@ -19,7 +19,7 @@ router.get("/",(req,res) => {
       }).then(response => {
 
         let data = response.articles;
-        console.log(data);
+        
         res.render("index",{data:data})
       });
       
