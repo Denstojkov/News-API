@@ -53,8 +53,9 @@ sagittis lacus vel augue laoreet rutrum faucibus."
             </div>
             
                 <div class="pt-3">
+					<% data.forEach(function(news){ %>
 					<div class="row d-flex justify-content-center">
-						<% data.forEach(function(news){ %>
+						
 						<div class="col-md-4 p-0">
 						<h1 class="newstitle">
 							<%= news.title %>	
@@ -83,11 +84,11 @@ It is a long established fact that a reader will be distracted by the readable c
 							</div>
 						
 					</div>
-					
+					<%	}) %>
 				</div>
+			
             </div>
         </div>
     </div>
-</div>
-<%	}) %>
+
 <%- include("partials/footer") %>

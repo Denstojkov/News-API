@@ -112,6 +112,7 @@ box-shadow: -1px 6px 27px -7px rgba(0,0,0,0.35);
 	color: white;
 	font-weight: 300;
 	text-align:  center;
+	height: 150px;
 }
 
 hr{
@@ -127,14 +128,14 @@ hr{
 }
 
 .newstitle{
-	font-size: 72px;
+	font-size: 1.5rem;
 	text-align: center;
 	font-family: 'Oswald', sans-serif;
 	font-weight: 300;
 }
 
 .newscontent{
-	font-size: 22px;
+	font-size: 1rem;
 	font-family: 'Oswald', sans-serif;
 	font-weight: 300;
 	text-align: justify;
