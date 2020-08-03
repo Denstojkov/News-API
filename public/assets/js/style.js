@@ -1,5 +1,6 @@
 $(function () {
-    $('[data-toggle="popover"]').popover()
+    $('[data-toggle="popover"]').popover();
+	
   })
 
 let colors= ["#896A67","#EAC435","#03CEA4","#3066BE","#FF858D","#2CA58D","#447604","#6CC551","#52AD9C","#F87060","#EE4266","#3F88C5"];
@@ -23,8 +24,3 @@ for(let i=0; i < gridColors.length; i++){
 	
 }
 
-
-for(let i=0; i < limitApiText.length; i++){
-limitApiText[i].innerText.replace(/^(.{11}[^\s]*).*/, "$1"); 
-limitApiHeader[i].innerText.replace(/^(.{11}[^\s]*).*/, "$1"); 
-}
