@@ -24,3 +24,22 @@ for(let i=0; i < gridColors.length; i++){
 	
 }
 
+window.addEventListener('resize', function(event){
+	if(innerWidth < 1100){
+		
+		limitApiHeader.forEach(function(header){
+			header.style.fontSize = "18px";
+		})
+		limitApiText.forEach(function(teyt){
+			teyt.style.fontSize = "16px";
+		})
+	} else{
+		limitApiHeader.forEach(function(header){
+			header.style.fontSize = "1.3vw";
+		})
+		limitApiText.forEach(function(teyt){
+			teyt.style.fontSize = "1.2vw";
+		})
+	}
+});
+
