@@ -14,7 +14,8 @@ expressSession = require("express-session")({
 methodOvveride = require("method-override");
 const index = require("./routes/index");
 const webshop = require("./routes/webshop");
-const userCP = require("./routes/userCP")
+const userCP = require("./routes/userCP");
+const login = require("./routes/login");
 router = express.Router();
 const fetch = require('node-fetch');
 const User = require('./models/user');
@@ -24,6 +25,7 @@ app.use(express.static(__dirname + "/public/"));
 app.use("/index", index);
 app.use("/webshop", webshop);
 app.use("/userCP", userCP);
+app.use("/login", login);
 app.set("view engine", "ejs");
 
 mongoose.connect("mongodb://localhost:27017/myapp", {
@@ -32,14 +34,14 @@ mongoose.connect("mongodb://localhost:27017/myapp", {
   useUnifiedTopology: true,
 });
 
-passport.use(User.createStrategy());
+passport.use(new passportLocal(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 
 
 app.get("/", (req,res) => {
-    res.redirect("/index");
+ res.redirect("/index");
 })
 
 // TEST

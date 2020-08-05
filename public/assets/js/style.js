@@ -1,6 +1,8 @@
 $(function () {
     $('[data-toggle="popover"]').popover();
-	
+	$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
   })
 
 let colors= ["#896A67","#EAC435","#03CEA4","#3066BE","#FF858D","#2CA58D","#447604","#6CC551","#52AD9C","#F87060","#EE4266","#3F88C5"];
@@ -42,4 +44,5 @@ window.addEventListener('resize', function(event){
 		})
 	}
 });
+
 
