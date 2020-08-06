@@ -30,8 +30,7 @@
                     <ul id="mainnav" class="nav justify-content-end">
                         <li class="nav-item" data-toggle="modal" data-target="#exampleModalCenter">
                             <a class="nav-link active" href="#"
-                                ><i class="fa fa-user-o fa-2x pr-1"></i>Sign In</a
-                            >
+                                ><i class="fa fa-user-o fa-2x pr-1"></i><% if(locals.currentUser == null){%> Sign In <%}else{%><%=currentUser.username %><%}%></a>
                         </li>
                         <li class="nav-item" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
 sagittis lacus vel augue laoreet rutrum faucibus.">
@@ -72,9 +71,7 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
 				<button type="submit" class="btn btn-primary ">
 					Login
 				</button>
-				<button type="submit" class="btn btn-danger">
-					Register
-				</button>
+				<a href="/register" class="btn btn-danger">Register</a>
 			</div>
 				
 			
