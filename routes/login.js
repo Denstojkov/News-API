@@ -6,12 +6,12 @@ let router = express.Router();
 const fetch = require('node-fetch');
 
 router.post("/", passport.authenticate("local", {
-    successRedirect: "/index",
     failureRedirect: "/unknown"
 }), function (req, res) {
-	 app.locals.currentUser = req.user;
-	console.log(req.user);
-	
+    req.app.locals.currentUser = req.user.username;
+    console.log(req.app.locals.currentUser);
+    res.redirect("back");
+
 });
 
 

@@ -22,7 +22,7 @@
             <div class="row border-bottom">
                 <div class="col-md-6 d-flex justify-content-end">
                     <h2 id="logo" class="pt-2">
-                        Klovo
+                        Klovo 
                         
                     </h2>
                 </div>
@@ -30,7 +30,7 @@
                     <ul id="mainnav" class="nav justify-content-end">
                         <li class="nav-item" data-toggle="modal" data-target="#exampleModalCenter">
                             <a class="nav-link active" href="#"
-                                ><i class="fa fa-user-o fa-2x pr-1"></i><% if(locals.currentUser == null){%> Sign In <%}else{%><%=currentUser.username %><%}%></a>
+                                ><i class="fa fa-user-o fa-2x pr-1"></i><% if(locals.currentUser == null){%> Sign In <%}else{%><%=locals.currentUser %><%}%></a>
                         </li>
                         <li class="nav-item" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
 sagittis lacus vel augue laoreet rutrum faucibus.">
