@@ -50,11 +50,6 @@ app.set("view engine", "ejs");
 
 app.locals.currentUser;
 
-app.use(function (req, res, next) {
-    res.locals.currentUser = req.user;
-	console.log(req.user);
-    next();
-});
 
 app.get("/", (req,res) => {
  res.redirect("/index");

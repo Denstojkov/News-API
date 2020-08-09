@@ -9,7 +9,8 @@ router.post("/", passport.authenticate("local", {
     successRedirect: "/index",
     failureRedirect: "/unknown"
 }), function (req, res) {
-	
+	 app.locals.currentUser = req.user;
+	console.log(req.user);
 	
 });
 
