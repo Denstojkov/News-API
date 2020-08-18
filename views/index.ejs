@@ -32,23 +32,24 @@
                 </div>
                 <div class="pt-3">
                     
-                    <div class="col-md-12">
+                    <div class="col-md-12 ">
                         <% let current = 0 %>
 						<% let count = 0 %>
 						<% let currentCount = 0 %>
                         <% data.forEach(function(news){ %>
                           <%	if(current === 1){ %>
 							<%let gridcount = Math.floor((12 - count)/2); %>
-							<div class="col-sm-12 col-md-<%=gridcount%>  mainGrid" onclick="location.href='/index/<%= news.title.replace(/'/g,"")%>';">
-								<h2 class="apiHeader">
-									<%= news.title.replace(/^(.{50}[^\s]*).*/, "$1") %>
-								</h2>
-								<hr class="px-2 mx-2">
-								<p class="apiText">
-									<%= news.description.replace(/^(.{180}[^\s]*).*/, "$1") %>
-									
-								</p>
-		
+							<div class="col-sm-12 col-md-<%=gridcount%> px-0 py-0  mainGrid" style="background-image: url(<%=news.urlToImage%>);" onclick="location.href='/index/<%= news.title.replace(/'/g,"")%>';">
+								<div class="darkFade p-0 m-0">
+									<h2 class="apiHeader">
+										<%= news.title.replace(/^(.{50}[^\s]*).*/, "$1") %>
+									</h2>
+									<hr class="px-2 mx-2">
+									<p class="apiText mb-0">
+										<%= news.description.replace(/^(.{180}[^\s]*).*/, "$1") %>
+										
+									</p>
+								</div>
 						</div>
 					
 				
@@ -59,28 +60,31 @@
 				<%	} %>
 						<div class="row">
 							
-						<div class="col-sm-12 col-md-<%=count%>  mainGrid" onclick="location.href='/index/<%= news.title.replace(/'/g,"")%>';">
+						<div class="col-sm-12 col-md-<%=count%> px-0 py-0  mainGrid" style="background-image: url(<%=news.urlToImage%>);" onclick="location.href='/index/<%= news.title.replace(/'/g,"")%>';">
+							<div class="darkFade p-0 m-0">
 							<h2 class="apiHeader">
 									<%= news.title.replace(/^(.{50}[^\s]*).*/, "$1") %>
 								</h2>
 							<hr class="px-2 mx-2">
-								<p class="apiText">
+								<p class="apiText mb-0">
 									<%= news.description.replace(/^(.{180}[^\s]*).*/, "$1") %>
 								</p></div>
-						
+							</div>
 							
 						<% currentCount = count %>
 						<% current = 1 %>
 					<%	}else if(current == 2){%>
 								
-									<div class="col-sm-12 col-md  mainGrid" onclick="location.href='/index/<%= news.title.replace(/'/g,"")%>';">
+									<div class="col-sm-12 col-md px-0 py-0  mainGrid" style="background-image: url(<%=news.urlToImage%>);"  onclick="location.href='/index/<%= news.title.replace(/'/g,"")%>';">
+										<div class="darkFade p-0 m-0">
 							<h2 class="apiHeader">
 									<%= news.title.replace(/^(.{50}[^\s]*).*/, "$1") %>
 								</h2>
 										<hr class="px-2 mx-2">
-								<p class="apiText">
+								<p class="apiText mb-0">
 									<%= news.description.replace(/^(.{180}[^\s]*).*/, "$1") %>
 								</p>
+							</div>
 						</div>
 						</div>
 						<% current = 0 %>

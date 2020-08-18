@@ -16,7 +16,7 @@ let count = [];
 
 
 
-for(let i=0; i < gridColors.length; i++){
+/*for(let i=0; i < gridColors.length; i++){
 	while(current === random){
 	 random = Math.floor( Math.random() * Math.floor(11));
 		}
@@ -25,7 +25,7 @@ for(let i=0; i < gridColors.length; i++){
 	count = random;
 	
 }
-
+*/
 window.addEventListener('resize', function(event){
 	if(innerWidth < 1100){
 		

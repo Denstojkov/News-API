@@ -14,6 +14,8 @@ const register = require("./routes/register");
 const login = require("./routes/login");
 const fetch = require('node-fetch');
 const User = require('./models/user');
+const Products = require('./models/products');
+const Cart = require('./models/cart');
 router = express.Router();
 expressSession = require("express-session")({
   secret: 'secret',
