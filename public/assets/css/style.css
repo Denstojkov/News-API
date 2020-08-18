@@ -90,8 +90,8 @@ box-shadow: -1px 6px 27px -7px rgba(0,0,0,0.35);
 	border: 1px solid white;
 	z-index: 0;
 	position: relative ;
-	background-size: auto;
 	background-size: cover;
+	
 	border-radius: 5px;
 	  transition: transform .2s; /* Animation */
 	
