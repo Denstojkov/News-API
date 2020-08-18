@@ -101,10 +101,11 @@ box-shadow: -1px 6px 27px -7px rgba(0,0,0,0.35);
 .mainGrid:hover{
 	transform: scale(1.1);
    cursor: pointer;
+   z-index: 3;	
 }
 
 .darkFade{
-	background: rgba(0, 0, 0, 0.5);
+	background: rgba(0, 0, 0, 0.4);
 	position: relative ;
 	z-index: 1;
 	height: 250px;
